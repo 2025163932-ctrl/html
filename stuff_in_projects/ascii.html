@@ -1,63 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>FoC</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  float: left;
- padding-right: 40px; 
- padding-left: 40px;
- padding-bottom: 40px;
- 
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ascii</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <a href="concepts.html">Concepts</a>
+      <a href="databases.html">Databases</a>
+      <a href="projects.html">Projects</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="dev_team.html">Dev Team</a>
+    </div>
+  </nav>
 
-<section>
-<h2>Project 1: ASCII</h2>
-<hr>	
+  <header>
+    <h1>ascii</h1>
+  </header>
 
+  <main class="container">
+    <p>Placeholder content for ascii.html.</p>
+  </main>
 
-<p><img src="ascii.png" style="width:792px;height:528px;"></p>
-        
-			
+  <footer>
+    <p>&copy; 2025 Modern HTML Project</p>
+  </footer>
 
-<p></p>
-<p></p>         
-
-
-<p>Enter any number from 0 to 127 :</p>
-<input id="inputdec" >
-<p></p>
-<button onclick="decToASCII()">Submit</button>
-<p></p>
-<p>ASCII Value : </p>
-<p id="demo"></p>
-
-<script>
-function decToASCII() {
-  x = document.getElementById("inputdec").value;
-  var res = String.fromCharCode(x);
-  document.getElementById("demo").innerHTML = res;
-  console.log(res);
-}
-</script>
-
-
-
-</section>
-
-
-<a href="index.html">Back to Home</a></h3>
-
-<footer>
-  <p>@ Powered by UB</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
