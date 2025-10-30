@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary to Hex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">Return to Home</a>
+      <a href="notgate.html">NOT gate</a>
+      <a href="andgate.html">AND Gate</a>
+      <a href="binarytohex.html">Binary to hexidecimal</a>
+      <a href="ascii.html">ASCLL Converter</a>
+      <a href="unicode.html">UNICODE</a>
+      <a href="MLinstructions.html">MLI Converter</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Binary to Hex Converter</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <img src="bintohex.jpg" alt="Binary to Hex Conversion" style="max-width:400px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+    <p>Enter any 4-digit binary number to convert it into hexadecimal:</p>
+
+    <div style="text-align:center; margin-top:1.5rem;">
+      <input type="number" id="inputBin" placeholder="e.g. 1101" style="padding:0.6rem; border:1px solid #ccc; border-radius:5px; width:180px; text-align:center;">
+      <button class="btn" onclick="binToHex()">Submit</button>
+    </div>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <p><strong>Hexadecimal Value:</strong></p>
+      <p id="demo" style="font-size:1.5rem; color:crimson; font-weight:bold;"></p>
+    </div>
+  </main>
+
+
+  <footer>
+    <p> Powered by Potatos and the hopes and dreams of children</p>
+  </footer>
+
+
+
+  <script>
+    function binToHex() {
+      var x = document.getElementById("inputBin").value.trim();
+      if (x === "") {
+        document.getElementById("demo").innerHTML = "Please enter a binary number.";
+        return;
+      }
+
+      // Validate input (must be binary)
+      if (!/^[01]+$/.test(x)) {
+        document.getElementById("demo").innerHTML = "Invalid input! Only 0 and 1 are allowed.";
+        return;
+      }
+
+      var hexOut = parseInt(x, 2).toString(16).toUpperCase();
+      document.getElementById("demo").innerHTML = hexOut;
+    }
+  </script>
+</body>
+</html>

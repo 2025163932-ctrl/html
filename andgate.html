@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AND Gate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">Return to Home</a>
+      <a href="notgate.html">NOT Gate</a>
+      <a href="andgate.html">AND Gate</a>
+      <a href="binarytohex.html">Binary to Hexadecimal</a>
+      <a href="ascii.html">ASCII Converter</a>
+      <a href="unicode.html">UNICODE</a>
+      <a href="MLinstructions.html">MLI Converter</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>AND Gate Simulation</h1>
+  </header>
+
+  <!-- Main Section -->
+  <main class="container" style="text-align:center;">
+    <div>
+      <button class="btn" onclick="and()">Run</button>
+    </div>
+
+    <table style="width:100%; margin-top:2rem;">
+      <tr>
+        <td style="text-align:center;">
+          <p><strong>Input 1</strong></p>
+          <img src="offbutton.png" id="toggleImage" onclick="toggleImage();" alt="Input 1" class="gate-input">
+          <br><br>
+          <p><strong>Input 2</strong></p>
+          <img src="offbutton.png" id="toggleImage2" onclick="toggleImage2();" alt="Input 2" class="gate-input">
+        </td>
+        <td style="text-align:center;">
+          <p><strong>AND Gate Output</strong></p>
+          <img id="andGate" src="and2off.png" alt="AND Gate Output" class="gate-output">
+        </td>
+      </tr>
+    </table>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p> Powered by Potatos and the hopes and dreams of children</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

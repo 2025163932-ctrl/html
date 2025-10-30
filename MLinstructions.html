@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML Instructions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">Return to Home</a>
+      <a href="notgate.html">NOT gate</a>
+      <a href="andgate.html">AND Gate</a>
+      <a href="binarytohex.html">Binary to hexidecimal</a>
+      <a href="ascii.html">ASCLL Converter</a>
+      <a href="unicode.html">UNICODE</a>
+      <a href="MLinstructions.html">MLI Converter</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Machine Language Instructions</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="text-align:center;">
+    <img id="MLinstructions" src="MLblank.png" alt="Machine Language" style="width:60%; max-width:600px; margin-bottom:2rem;">
+
+    <div>
+      <button class="btn" onclick="changeImages('ML1.png', 'EI1.png')">156C</button>
+      <button class="btn" onclick="changeImages('ML2.png', 'EI2.png')">166D</button>
+      <button class="btn" onclick="changeImages('ML3.png', 'EI3.png')">5056</button>
+      <button class="btn" onclick="changeImages('ML4.png', 'EI4.png')">306E</button>
+      <button class="btn" onclick="changeImages('ML5.png', 'EI5.png')">C000</button>
+    </div>
+
+    <img id="Englishinstructions" src="" alt="English Instructions" style="width:60%; max-width:600px; margin-top:2rem;">
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Modern HTML Project</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function changeImages(mlSrc, engSrc) {
+      document.getElementById('MLinstructions').src = mlSrc;
+      document.getElementById('Englishinstructions').src = engSrc;
+    }
+  </script>
+</body>
+</html>

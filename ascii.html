@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">Return to Home</a>
+      <a href="notgate.html">NOT gate</a>
+      <a href="andgate.html">AND Gate</a>
+      <a href="binarytohex.html">Binary to hexidecimal</a>
+      <a href="ascii.html">ASCLL Converter</a>
+      <a href="unicode.html">UNICODE</a>
+      <a href="MLinstructions.html">MLI Converter</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>ASCII Converter</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <img src="ascii.png" alt="ASCII Table" style="width:100%; max-width:800px; height:auto; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+
+    <p>Enter any number from 0 to 127 to find its ASCII character equivalent:</p>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <input id="inputdec" type="number" min="0" max="127" placeholder="Enter number" 
+             style="padding:10px; font-size:1rem; border-radius:5px; border:1px solid #ccc; width:150px;">
+      <button class="btn" onclick="decToASCII()">Submit</button>
+    </div>
+
+    <p style="text-align:center;
+
+

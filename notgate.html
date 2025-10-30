@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOT Gate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">Return to Home</a>
+      <a href="notgate.html">NOT gate</a>
+      <a href="andgate.html">AND Gate</a>
+      <a href="binarytohex.html">Binary to hexidecimal</a>
+      <a href="ascii.html">ASCLL Converter</a>
+      <a href="unicode.html">UNICODE</a>
+      <a href="MLinstructions.html">MLI Converter</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>NOT Gate</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <p>This is an animation of a NOT Logic Gate. Click the buttons below to switch the gate state.</p>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button class="btn" onclick="document.getElementById('myImage').src='off.png'">Off</button>
+      <button class="btn" onclick="document.getElementById('myImage').src='on.png'">On</button>
+
+      <img id="myImage" src="off.png" alt="NOT Gate Animation" style="width:150px; margin-top: 1.5rem;">
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p> Powered by Potatos and the hopes and dreams of children </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
