@@ -42,7 +42,7 @@ function and() {
 
 // Redirect to Resume Site
   function goToSite() {
-    window.location.href = "https://example.com"; // put your URL here
+    window.location.href = "https://2025163932-ctrl.github.io/programs/"; // put your URL here
   }
 
 
