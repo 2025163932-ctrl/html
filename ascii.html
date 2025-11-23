@@ -7,36 +7,79 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html">Return to Home</a>
       <a href="notgate.html">NOT gate</a>
       <a href="andgate.html">AND Gate</a>
       <a href="binarytohex.html">Binary to hexidecimal</a>
-      <a href="ascii.html">ASCLL Converter</a>
+      <a href="ascii.html">ASCII Converter</a>
       <a href="unicode.html">UNICODE</a>
       <a href="MLinstructions.html">MLI Converter</a>
     </div>
   </nav>
 
-  <!-- Header Section -->
   <header>
     <h1>ASCII Converter</h1>
   </header>
 
-  <!-- Main Content -->
   <main class="container">
     <img src="ascii.png" alt="ASCII Table" style="width:100%; max-width:800px; height:auto; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
 
     <p>Enter any number from 0 to 127 to find its ASCII character equivalent:</p>
 
     <div style="text-align:center; margin-top:2rem;">
-      <input id="inputdec" type="number" min="0" max="127" placeholder="Enter number" 
+      <input id="asciiInput" type="number" min="0" max="127" placeholder="Enter number"
              style="padding:10px; font-size:1rem; border-radius:5px; border:1px solid #ccc; width:150px;">
-      <button class="btn" onclick="decToASCII()">Submit</button>
+      <button class="btn" onclick="convertToAscii()">Submit</button>
     </div>
 
-    <p style="text-align:center;
+    <p id="errorMessage" style="display:none; color:red; text-align:center;">Please enter a valid number between 0 and 127.</p>
 
+    <h2 style="text-align:center; margin-top:1.5rem;">Result:</h2>
+    <p id="asciiResult" style="text-align:center; font-size:2rem; font-weight:bold; transition:0.2s;">-</p>
+  </main>
 
+  <script>
+    function getAsciiChar(decimal) {
+      const asciiMap = {
+        0: 'NUL', 1: 'SOH', 2: 'STX', 3: 'ETX', 4: 'EOT', 5: 'ENQ', 6: 'ACK', 7: 'BEL',
+        8: 'BS', 9: 'HT', 10: 'LF', 11: 'VT', 12: 'FF', 13: 'CR', 14: 'SO', 15: 'SI',
+        16: 'DLE', 17: 'DC1', 18: 'DC2', 19: 'DC3', 20: 'DC4', 21: 'NAK', 22: 'SYN',
+        23: 'ETB', 24: 'CAN', 25: 'EM', 26: 'SUB', 27: 'ESC', 28: 'FS', 29: 'GS',
+        30: 'RS', 31: 'US', 32: 'SP', 127: 'DEL'
+      };
+
+      if (asciiMap[decimal] !== undefined) return asciiMap[decimal];
+      return String.fromCharCode(decimal);
+    }
+
+    function convertToAscii() {
+      const input = document.getElementById('asciiInput').value;
+      const errorMessage = document.getElementById('errorMessage');
+      const resultDisplay = document.getElementById('asciiResult');
+
+      errorMessage.style.display = 'none';
+
+      const num = parseInt(input);
+      if (isNaN(num) || num < 0 || num > 127) {
+        errorMessage.style.display = 'block';
+        resultDisplay.textContent = '-';
+        return;
+      }
+
+      const asciiChar = getAsciiChar(num);
+      resultDisplay.textContent = asciiChar;
+
+      resultDisplay.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        resultDisplay.style.transform = 'scale(1)';
+      }, 200);
+    }
+
+    document.getElementById('asciiInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') convertToAscii();
+    });
+  </script>
+</body>
+</html>

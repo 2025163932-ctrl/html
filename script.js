@@ -40,5 +40,11 @@ function and() {
     }
 }
 
+// Redirect to Resume Site
+  function goToSite() {
+    window.location.href = "https://example.com"; // put your URL here
+  }
+
+
 
 

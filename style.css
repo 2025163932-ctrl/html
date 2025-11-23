@@ -21,6 +21,11 @@ body {
   padding: 20px 0;
 }
 
+div {
+  text-align: center;
+}
+
+
 /* ---------- Navigation Bar ---------- */
 .navbar {
   background-color: #000000;
@@ -109,12 +114,12 @@ img {
 
 /* Center carousel images specifically */
 .carousel-item img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 0;
-  max-height: 400px;
-  object-fit: cover;
+    height: 600px;        /* Set the height you want */
+    object-fit: cover;    /* Crops edges so image always fills the space */
+    width: 150%;          /* Already there from Bootstrap, but ensures full width */
+    border-radius: 10px;  /* Optional: makes them look nicer */
 }
+
 
 /* ---------- Main Paragraph / Content ---------- */
 main p {
