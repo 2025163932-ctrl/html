@@ -114,10 +114,10 @@ img {
 
 /* Center carousel images specifically */
 .carousel-item img {
-    height: 600px;        /* Set the height you want */
-    object-fit: cover;    /* Crops edges so image always fills the space */
+    height: 800px;        /* Set the height you want */
+    object-fit: contain;    /* Crops edges so image always fills the space */
     width: 150%;          /* Already there from Bootstrap, but ensures full width */
-    border-radius: 10px;  /* Optional: makes them look nicer */
+    border-radius: 9px;  /* Optional: makes them look nicer */
 }
 
 
